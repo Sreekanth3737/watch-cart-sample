@@ -4,14 +4,15 @@ const Category=require("../models/categoryModel")
 const  SubCategory=require("../models/subCategoryModel")
 
 const addCategory=async(req,res)=>{
-    
+    console.log(req.body,"cat----------gory");
     try {
         const category_data=await Category.find();
+
         if(category_data.length>0){
 
         let checking=false;
         for(let i=0;i< category_data.length;i++){
-            if(category_data[i]['category'].toLowerCase()===req.body.category_name.toLowerCase()){
+            if(category_data[i]['category'].toLowerCase()===req.body.catagory_name.toLowerCase()){
 
                 checking=true;
                 break;
@@ -20,11 +21,12 @@ const addCategory=async(req,res)=>{
 
         if(checking==false){
             const category=new Category({
-                category:req.body.category_name
+                category:req.body.catagory_name
             });
              const cat_data=await category.save();
-           // console.log(category);
+            console.log(category);
             // res.status(200).send({sucess:true,msg:"category Data",data:cat_data});
+            // console.log(req.body+"categories+++++");
                 res.redirect('/admin/add-category')
         }
 
@@ -33,10 +35,10 @@ const addCategory=async(req,res)=>{
         }
     }else{
         const category = new Category({
-            category:req.body.category_name
+            category:req.body.catagory_name
         })
         const category_datas = await category.save()
-       // console.log(category_datas);
+        
         res.redirect('/admin/add-category')
     } 
     
