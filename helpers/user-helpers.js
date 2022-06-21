@@ -24,10 +24,7 @@ let instance=new Razorpay({
     key_secret: process.env.RAZORPAY_KEY,
 });
 
-// let instance= new Razorpay({
-//     key_id: 'rzp_test_bAry8hlQGMmmX4',
-//     key_secret: 'Dr5b6GNLGm0sk4C2n9IDjUpN',
-// })
+
 
 
 

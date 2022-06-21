@@ -65,14 +65,7 @@ res.redirect('/admin/add-banners')
 })
 
 
-router.get('/admin/delete-banner/:id',(req,res)=>{
- 
 
-  //console.log(proId);
-  productHelpers.deleteBanner(req.params.id).then((response)=>{
-    res.redirect('/admin/add-banners')
-  })
-});
 
 
 //----------------Add product----------//

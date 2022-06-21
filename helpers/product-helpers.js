@@ -52,13 +52,7 @@ const storage= multer.diskStorage({
 
   }
 
-  const deleteBanner=(bannerId)=>{
-      return new Promise((resolve,reject)=>{
-           Banner.deleteOne({_id:bannerId}).then((response)=>{
-              resolve(response)
-          })
-      })
-  }
+ 
 
 //--------add-products---------------------------------
 const addProducts=(adminProduct,mainImage,nextImage)=>{
@@ -95,7 +89,7 @@ const  getAllProductDetails=(proId)=>{
     return new Promise((resolve,reject)=>{
         
         //Product.findOne({_id:proId}).lean().then((product_info)=>{
-            const getproductdetails=Product.findOne({_id:proId}).populate({path:'subcategory',populate:{path:'subcategoryName'}}).populate('brandnames').lean()
+            const getproductdetails=Product.findOne({_id:proId}).populate('brandnames').populate('subcategory').populate('catagory').lean()
             //console.log(getproductdetails+'gffffffffffff')
             resolve(getproductdetails)
 
@@ -173,7 +167,7 @@ const updateProduct=(proId,proDetails,mainImage,nextImage)=>{
 
 
 module.exports={upload,updateProduct,getAllProductDetails,
-    addProducts,addBrandName,getBrandDetails,addBanner,getBannerImages,deleteBanner,
+    addProducts,addBrandName,getBrandDetails,addBanner,getBannerImages,
    getAllProducts:()=>{
        return new Promise(async(resolve,reject)=>{
            let products=await Product.find({}).populate('brandnames').populate({path:'subcategory',populate:{path:'subcategoryName'}}).populate({path:'catagory',populate:{path:'category'}}).lean().then((products)=>{

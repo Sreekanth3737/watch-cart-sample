@@ -1,6 +1,6 @@
 // const { response } = require("../../app")
 
-const { response } = require("../../app");
+//const { response } = require("../../app");
 
 function addToCart(proId){
       $.ajax({

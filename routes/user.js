@@ -11,7 +11,7 @@ const config=require('../config/config')
 const mongoose=require('mongoose');
 const session = require('express-session');
 const { response } = require('../app');
-//const cartHelper=require('../helpers/cartHelper')
+
 
 
 const verifyLogin=(req,res,next)=>{
@@ -269,7 +269,6 @@ router.post('/reset-password',userHelpers.updateNewPassword)
 router.get('/product-details-page/:id',async(req,res)=>{
 let user=req.session.user
  if(user){
-
      let productDetails=await productHelpers.getAllProductDetails(req.params.id)
    //console.log(productDetails);
 
