@@ -110,7 +110,7 @@
                         </a> }}
                         <h6 class="mb-3">&#x20b9 {{this.product.price}}.00</h6>
 
-                        <button onclick="addToCart('{{this.product._id}}')" class="btn btn-warning px-3 mx-2">Add to Cart</button>
+                        <button onclick="addToCart('{{this.product._id}}')" class="btn btn-warning px-3 mx-2"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
                         <a href="/delete-wishlist-product/{{this.product._id}}"
                             onclick="return confirm('Are you want to delete {{this.product.brandnames.brand}} From Wishlist?')">
                             <button type="button" class="btn btn-primary btn-sm me-1  mx-2" data-mdb-toggle="tooltip"

@@ -11,14 +11,14 @@
           <a class="nav-link active" aria-current="page" href="/">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/cart"><strong>Cart </strong> <span class="badge bg-dark" id="cart-count">{{cartCount}}</span></a>
+          <a class="nav-link" href="/cart"><i class="fa-solid fa-cart-shopping"></i> <strong>Cart </strong> <span class="badge bg-dark" id="cart-count">{{cartCount}}</span></a>
         </li>
         {{#if user}}
         <li class="nav-item">
           <a class="nav-link" href="/view-orders"><strong> Orders</strong></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/wishlist"><strong> Whishlist</strong> <span class="badge bg-dark" id="wishlist-count">{{wishlistCount}}</span></a>
+          <a class="nav-link" href="/wishlist"><i class="fa-solid fa-heart"></i> <strong></strong> Wishlist</strong> <span class="badge bg-dark" id="wishlist-count">{{wishlistCount}}</span></a>
 
         </li>
         {{/if}}
@@ -31,7 +31,7 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> --}}
       <div class="dropdown">
-  <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button  class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     {{#if user}}
       {{user.name}}
       {{else}}
