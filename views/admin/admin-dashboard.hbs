@@ -133,7 +133,7 @@
           {{!-- <div class="sales-details"> --}}
 
 
-            <table id="orderTable" style="width:900px" class="table-responsive  border rounded border-secondary table table-hover">
+            <table id="orderTable" style="word-wrap;" class="table-responsive  border rounded border-secondary table table-hover">
               <thead class="table-dark">
                 <tr>
                   <th scope="col">Date</th>
@@ -153,26 +153,26 @@
               <tbody>
                 {{#each salesTable}}
 
-                <tr class="table-light">
+                <tr style="word-wrap:break-word ; min-width:10px; max-width:160px" class="table-light">
 
-                  <td>{{this.date}}</td>
-                  <td>{{this.name}}</td>
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.date}}</td>
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.name}}</td>
 
-                  <td>{{this.address}}</td>
-
-
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.address}}</td>
 
 
-                  <td>{{this.pincode}}</td>
-                  <td>{{this.mobile}}</td>
+
+
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.pincode}}</td>
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.mobile}}</td>
                   {{#each this.products}}
-                  <td>{{this.brandnames.brand}}</td>
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.brandnames.brand}}</td>
 
                   {{/each}}
 
-                  <td>{{this.totalAmt}}</td>
-                  <td>{{this.paymentMethod}}</td>
-                  <td>{{this.status}}</td>
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.totalAmt}}</td>
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.paymentMethod}}</td>
+                  <td style="word-wrap:break-word ; min-width:100px; max-width:100px;">{{this.status}}</td>
 
 
 
