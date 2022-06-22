@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
-    <link rel="stylesheet" href="style.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+
+<head>
+  <meta charset="UTF-8">
+  <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+  <link rel="stylesheet" href="style.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
       <span class="logo_name">CodingLab</span>
     </div>
-      <ul class="nav-links">
-        <li>
-          <a href="/admin" class="active">
-            <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="/admin/view-products">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">Product</span>
-          </a>
-        </li>
-        <li>
-          <a href="/admin/view-all-orders">
-            <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Order list</span>
-          </a>
-        </li>
-        <li>
-          <a href="/admin/all-users">
-            <i class='bx bx-pie-chart-alt-2' ></i>
-            <span class="links_name">All Users</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">Stock</span>
-          </a>
-        </li>
-        <li>
-          <a href="/admin/view-all-orders">
-            <i class='bx bx-book-alt' ></i>
-            <span class="links_name">Total order</span>
-          </a>
-        </li>
-       
-        <li class="log_out">
-          <a href="/logout">
-            <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
-          </a>
-        </li>
-      </ul>
+    <ul class="nav-links">
+      <li>
+        <a href="/admin" class="active">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/view-products">
+          <i class='bx bx-box'></i>
+          <span class="links_name">Product</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/view-all-orders">
+          <i class='bx bx-list-ul'></i>
+          <span class="links_name">Order list</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/all-users">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links_name">All Users</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-coin-stack'></i>
+          <span class="links_name">Stock</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/view-all-orders">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Total order</span>
+        </a>
+      </li>
+
+      <li class="log_out">
+        <a href="/logout">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
   </div>
   <section class="home-section">
     <nav>
@@ -69,10 +71,10 @@
       </div>
       {{!-- <div class="search-box">
         <input type="text" placeholder="Search...">
-        <i class='bx bx-search' ></i>
+        <i class='bx bx-search'></i>
       </div> --}}
 
-     
+
 
 
     </nav>
@@ -99,7 +101,7 @@
               <span class="text">Up from yesterday</span>
             </div>
           </div>
-          <i class='bx bxs-cart-add cart two' ></i>
+          <i class='bx bxs-cart-add cart two'></i>
         </div>
         <div class="box">
           <div class="right-side">
@@ -110,7 +112,7 @@
               <span class="text">Up from yesterday</span>
             </div>
           </div>
-          <i class='bx bx-cart cart three' ></i>
+          <i class='bx bx-cart cart three'></i>
         </div>
         <div class="box">
           <div class="right-side">
@@ -121,82 +123,72 @@
               <span class="text">Down From Today</span>
             </div>
           </div>
-          <i class='bx bxs-cart-download cart four' ></i>
+          <i class='bx bxs-cart-download cart four'></i>
         </div>
       </div>
 
       <div style="height: fit-content;" class="sales-boxes ">
         <div class="recent-sales box">
           <div class="title">Recent Sales</div>
-           <div class="sales-details"> 
-            
-           
-{{!-- table --}}
+          <div class="sales-details">
+
+
+            <table id="orderTable" class="table  border rounded border-secondary table table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Customer</th>
+                  <th scope="col">Address</th>
+
+                  <th scope="col">Pincode</th>
+                  <th scope="col">Mobile</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Payment</th>
+                  <th scope="col">Status</th>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                {{#each salesTable}}
+
+                <tr class="table-light">
+
+                  <td>{{this.date}}</td>
+                  <td>{{this.name}}</td>
+
+                  <td>{{this.address}}</td>
 
 
 
 
-{{!-- table end --}}
+                  <td>{{this.pincode}}</td>
+                  <td>{{this.mobile}}</td>
+                  {{#each this.products}}
+                  <td>{{this.brandnames.brand}}</td>
+
+                  {{/each}}
+
+                  <td>{{this.totalAmt}}</td>
+                  <td>{{this.paymentMethod}}</td>
+                  <td>{{this.status}}</td>
 
 
-<section>
-   
-        <table id="orderTable" class="table  border rounded border-secondary table table-hover">
-  <thead class="table-dark">
-    <tr>
-      <th scope="col">Date</th>
-      <th scope="col">Customer</th>
-      <th scope="col">Address</th>
-      
-      <th scope="col">Pincode</th>
-      <th scope="col">Mobile</th>
-      <th scope="col">Product</th>
-      <th scope="col">Amount</th>
-      <th scope="col">Payment</th>
-      <th scope="col">Status</th>
-
-    </tr>
-  </thead>
-  
-  <tbody>
-      {{#each salesTable}}
-
-       <tr class="table-light">
-    
-      <td>{{this.date}}</td>
-      <td>{{this.name}}</td>
-     
-      <td>{{this.address}}</td>
-     
-     
-      
-      
-      <td>{{this.pincode}}</td>
-      <td>{{this.mobile}}</td>
-     {{#each this.products}}
-      <td>{{this.brandnames.brand}}</td>
-
-      {{/each}}
-      
-      <td>{{this.totalAmt}}</td>
-      <td>{{this.paymentMethod}}</td>
-      <td>{{this.status}}</td>
-
-     
-     
-      
-      
-        </tr>
-        
-     {{/each}}
-    
-    </tbody>
-     
-  </table>
-   
 
 
-  </div> 
+
+                </tr>
+
+                {{/each}}
+
+              </tbody>
+
+            </table>
+
+
+
+          </div>
 
 
           <div class="button">
@@ -204,46 +196,46 @@
           </div>
         </div>
         {{!-- chart --}}
-    <div style="height:fit-content" class="top-sales box">
-                    <div class="title text-primary"><strong>Chart</strong></div>
-                    <canvas id="doughnutChart"></canvas>
-                </div>
+        <div style="height:fit-content" class="top-sales box">
+          <div class="title text-primary"><strong>Chart</strong></div>
+          <canvas id="doughnutChart"></canvas>
+        </div>
       </div>
     </div>
-      {{!-- chart --}}
-</section>
+    {{!-- chart --}}
+  </section>
 
   <script>
-   let sidebar = document.querySelector(".sidebar");
-let sidebarBtn = document.querySelector(".sidebarBtn");
-sidebarBtn.onclick = function() {
-  sidebar.classList.toggle("active");
-  if(sidebar.classList.contains("active")){
-  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
-}else
-  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-}
- </script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function () {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+  </script>
 
- <script>
-        //doughnut
-        var ctxD = document.getElementById("doughnutChart").getContext('2d');
-        var myLineChart = new Chart(ctxD, {
-            type: 'doughnut',
-            data: {
-                labels: ["All Users", "Total Orders", "Total Products", "Total Income"],
-                datasets: [{
-                    data: [{{orderCount}},{{allUsers}},{{productCount}}],
-                    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-                    hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+  <script>
+    //doughnut
+    var ctxD = document.getElementById("doughnutChart").getContext('2d');
+    var myLineChart = new Chart(ctxD, {
+      type: 'doughnut',
+      data: {
+        labels: ["All Users", "Total Orders", "Total Products", "Total Income"],
+        datasets: [{
+          data: [{{ orderCount }}, {{ allUsers }},{{ productCount }}],
+    backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+      hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
                 }]
             },
-            options: {
-                responsive: true
-            }
+    options: {
+      responsive: true
+    }
         });
-    </script>
+  </script>
 
 </body>
-</html>
 
+</html>
