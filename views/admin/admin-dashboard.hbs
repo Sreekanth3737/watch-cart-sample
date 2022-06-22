@@ -131,12 +131,17 @@
            <div class="sales-details"> 
             
            
+{{!-- table --}}
 
+
+
+
+{{!-- table end --}}
 
 
 <section>
    
-        <table id="orderTable" class="table  border rounded border-secondary">
+        <table id="orderTable" class="table  border rounded border-secondary table table-hover">
   <thead class="table-dark">
     <tr>
       <th scope="col">Date</th>
@@ -156,7 +161,7 @@
   <tbody>
       {{#each salesTable}}
 
-       <tr>
+       <tr class="table-light">
     
       <td>{{this.date}}</td>
       <td>{{this.name}}</td>
@@ -187,11 +192,11 @@
     
     </tbody>
      
-</table>
+  </table>
    
-</section>
 
- </div>
+
+  </div> 
 
 
           <div class="button">
@@ -206,7 +211,7 @@
       </div>
     </div>
       {{!-- chart --}}
-  </section>
+</section>
 
   <script>
    let sidebar = document.querySelector(".sidebar");
